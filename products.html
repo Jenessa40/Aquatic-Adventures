@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquatic Adventures - Fish Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #fff5ec;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FFA500;
+            padding: 1rem 2rem;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #008080;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FFA500;
+            padding: 1rem 2rem;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color:#008080;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #008080;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3713ba;
+        }
+
+
+        /* Page Header */
+        .page-header {
+            padding: 6rem 2rem 2rem;
+            text-align: center;
+            background: url('Products.jpg') no-repeat center center/cover;
+            color: #005252;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+        }
+
+        /* Intro Section */
+        .intro {
+            padding: 2rem;
+            text-align: center;
+            background-color: white;
+        }
+
+        .intro h2 {
+            color: #008080;
+            margin-bottom: 1rem;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.1rem;
+            color: #008080;
+        }
+
+        .inventory-gallery {
+            padding: 2rem;
+            text-align: center;
+            background-color: white;
+        }
+
+        .inventory-gallery h2 {
+            font-size: 30px;
+            color: #008080;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Container for images */
+        .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        }
+
+        /* Make all images the same size */
+        .image-gallery img {
+        width: 200px;       /* Fixed width */
+        height: 200px;      /* Fixed height */
+        object-fit: cover;  /* Crop to fill without distortion */
+        border-radius: 8px; /* Optional: rounded corners */
+        display: block;
+    }
+
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .inventory-grid img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .supply-section {
+            margin-top: 40px;   /* pushes the whole section down */
+            padding-top: 2px;  /* optional: adds space inside the section */
+            text-align: center;
+        }
+
+        .supply-section h3 {
+            font-size: 30px;
+            color: #008080;
+            margin-top: 20px;
+            padding-top: 20px; /* adds space above the title */
+            margin-bottom: 1rem;
+        }
+
+        /* Product Grid */
+        .products {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .products h2 {
+            color: #FFA500;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            margin: 0.5rem 0;
+        }
+
+        /* Footer */
+        .page-footer {
+            background-color: #222;       
+            color: #fff;                  
+            text-align: center;           
+            padding: 20px 10px;            
+            font-size: 0.9rem;             
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-footer {
+            margin-top: auto;             
+        }
+
+        /* 1. Make layout fluid and mobile-friendly */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        /* 2. Make images scale inside small screens */
+        img {
+            max-width: 100%;
+            height: auto; /* keeps proportions */
+        }
+/* supported technique [InlineCitation-1-HTML Responsive Web Design](https://www.w3schools.com/html/html_responsive.asp) [InlineCitation-2-HTML & CSS Responsive Design](https://www.w3schools.com/htmlcss/htmlcss_responsive_design.asp) */
+
+
+        /* 3. Base mobile-first layout: column stacking */
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            gap: 16px;
+        }
+
+        /* 4. Responsive text that scales a bit */
+        h1, h2, h3, p {
+        font-size: clamp(1rem, 4vw, 1.3rem); /* fluid typography [InlineCitation-2-HTML & CSS Responsive Design](https://www.w3schools.com/htmlcss/htmlcss_responsive_design.asp) */
+        }
+
+        /* 5. Smartphone styles: screens 600px and below */
+        @media screen and (max-width: 600px) { /* typical smartphone breakpoint [InlineCitation-3-Responsive Web Design Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp) */
+        .container {
+            padding: 12px;
+            }
+
+        nav, header, footer {
+            text-align: center;
+        }
+
+        .card {
+            width: 100%;     /* fit each card full width */
+            padding: 12px;
+            box-sizing: border-box;
+    }
+}
+
+        /* 6. Tablet and up (optional) */
+        @media screen and (min-width: 601px) {
+            .container {
+                flex-direction: row; /* side-by-side layout on larger screens */
+                flex-wrap: wrap;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Aquatic Adventures</div>
+            <ul class="nav-links">
+                <li><a href="about.html">Home</a></li>
+                <li><a href="fish.html">Fish</a></li>
+                <li><a href="products.html">Fish Supplies</a></li>
+                <li><a href="reptiles.html">Reptiles</a></li>
+                <li><a href="location.html">Location</a></li>
+                <!-- Facebook icon link -->
+                <li>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+                <a href="https://www.facebook.com/people/Aquatic-Adventures/61558479800656/" 
+                   class="facebook-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Visit our Facebook page">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Supplies</h1>
+        <p></p>
+    </section>
+
+    <!-- Inventory Gallery -->
+<section class="inventory-gallery">
+    <h2>Tank Set Up</h2>
+        <div class="inventory-grid">
+            <img id="myImage" src="tank1.jpg" alt="Inventory Item 1">
+            <img id="myImage" src="tank2.jpg" alt="Inventory Item 2">
+            <img id="myImage" src="waterfilters.jpg" alt="Inventory Item 3">
+            <img id="myImage" src="morefilters.jpg" alt="Inventory Item 4">
+            <img id="myImage" src="pumps.jpg" alt="Inventory Item 5">
+            <img id="myImage" src="bubblers.jpg" alt="Inventory Item 6">
+            <img id="myImage" src="waterconditioner.jpg" alt="Inventory Item 7">
+            <img id="myImage" src="waterheater.jpg" alt="Inventory Item 8">
+            <img id="myImage" src="cleaning.jpg" alt="Inventory Item 9">
+            <img id="myImage" src="27.jpg" alt="Inventory Item 10">
+            <img id="myImage" src="salt.jpg" alt="Inventory Item 11">
+            <img id="myImage" src="fishgravel.jpg" alt="Inventory Item 12">
+        </div>
+    </section>
+<section class="inventory-gallery">
+    <h2>Fish Care</h2>
+        <div class="inventory-grid">
+            <img id="myImage" src="Feederfish.jpg" alt="Inventory Item 1">
+            <img id="myImage" src="bugbites.jpg" alt="Inventory Item 2">
+            <img id="myImage" src="fishpellets.jpg" alt="Inventory Item 3">
+            <img id="myImage" src="28.jpg" alt="Inventory Item 4">
+            <img id="myImage" src="29.jpg" alt="Inventory Item 5">
+            <img id="myImage" src="fishstuff.jpg" alt="Inventory Item 6">
+            <img id="myImage" src="bluegreen.jpg" alt="Inventory Item 7">
+            <img id="myImage" src="brine.jpg" alt="Inventory Item 8">
+            <img id="myImage" src="mysis.jpg" alt="Inventory Item 9">
+            <img id="myImage" src="mysis2.jpg" alt="Inventory Item 10">
+            <img id="myImage" src="bloodworms.jpg" alt="Inventory Item 11">
+            <img id="myImage" src="plankton.jpg" alt="Inventory Item 12">
+            
+        </div>
+    </section>
+<section class="inventory-gallery">
+    <h2>Betta Supplies</h2>
+        <div class="inventory-grid">
+            <img id="myImage" src="bettasupplies.jpg" alt="Inventory Item 1">
+            <img id="myImage" src="bettasupplies2.jpg" alt="Inventory Item 2">
+            <img id="myImage" src="bettasupplies3.jpg" alt="Inventory Item 3">
+        </div>
+    </section>
+<section class="inventory-gallery">
+    <h2>Decorations</h2>
+        <div class="inventory-grid">
+            <img id="myImage" src="bottomrocks.jpg" alt="Inventory Item 1">
+            <img id="myImage" src="decor.jpg" alt="Inventory Item 2">
+            <img id="myImage" src="decor2.jpg" alt="Inventory Item 3">
+            <img id="myImage" src="decor3.jpg" alt="Inventory Item 4">
+            <img id="myImage" src="decor4.jpg" alt="Inventory Item 5">
+            <img id="myImage" src="decor5.jpg" alt="Inventory Item 6">
+            <img id="myImage" src="glofish.jpg" alt="Inventory Item 7">
+            <img id="myImage" src="fakeplants.jpg" alt="Inventory Item 8">
+            <img id="myImage" src="fakeplants2.jpg" alt="Inventory Item 9">
+            <img id="myImage" src="decor6.jpg" alt="Inventory Item 10">
+            <img id="myImage" src="decor7.jpg" alt="Inventory Item 11">
+            <img id="myImage" src="decor8.jpg" alt="Inventory Item 12">
+            <img id="myImage" src="decor9.jpg" alt="Inventory Item 13">
+            <img id="myImage" src="scubadivers.jpg" alt="Inventory Item 14">
+            <img id="myImage" src="heyarnold.jpg" alt="Inventory Item 15">
+            <img id="myImage" src="barbie.jpg" alt="Inventory Item 16">
+            <img id="myImage" src="decor10.jpg" alt="Inventory Item 17">
+            <img id="myImage" src="decor11.jpg" alt="Inventory Item 18">
+            <img id="myImage" src="decor12.jpg" alt="Inventory Item 19">
+            <img id="myImage" src="decor14.jpg" alt="Inventory Item 20">
+            <img id="myImage" src="decor15.jpg" alt="Inventory Item 21">
+            <img id="myImage" src="decor16.jpg" alt="Inventory Item 22">
+            <img id="myImage" src="aquafloras.jpg" alt="Inventory Item 23">
+            <img id="myImage" src="bubble.jpg" alt="Inventory Item 24">
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="page-footer">
+    <p>&copy; 2026 Aquatice Adventures. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
