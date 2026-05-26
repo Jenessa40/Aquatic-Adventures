@@ -236,36 +236,46 @@
         background-position: center;
         width: 100%;
     }
-    .layout {
-        display: flex;
-        flex-direction: column;   /* stack table, then pictures */
-        align-items: center;
-        gap: 12px;                /* space between table and pictures */
-        margin-top: 0;
+    
+   .layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;   /* 2 columns */
+        grid-template-rows: auto auto;    /* 2 rows */
+        gap: 20px;
+        width: 100%;
+        justify-items: center;
+        align-items: start;
     }
 
+    /* TABLE — Row 1, Column 1 */
     #hoursTable {
-        order: 1;                 /* show FIRST */
-        width: 80%;
-        max-width: 400px;
-        margin: 0 auto;
+        grid-row: 1;
+        grid-column: 1;
+        width: 90%;
         font-size: 12px;
     }
 
-    .layout img {
-        order: 2;                 /* show AFTER table */
-        max-width: 40%;           /* bigger pictures */
-        height: auto;
-        margin: 0 5px;
+    /* MARQUEE PICTURE — Row 1, Column 2 */
+    .layout img:first-of-type {
+        grid-row: 1;
+        grid-column: 2;
+        max-width: 80%;
     }
 
+    /* OTHER PICTURE — Row 2, Column 1 */
+    .layout img:last-of-type {
+        grid-row: 2;
+        grid-column: 1;
+        max-width: 80%;
+    }
+
+    /* TESTIMONY — Row 2, Column 2 */
     h4 {
-        width: 70%;
-        margin: 10px auto 10px 40px;
-        font-size: 12px;
+        grid-row: 2;
+        grid-column: 2;
+        width: 90%;
         text-align: left;
-        display: block;
-        clear: both;
+        font-size: 12px;
     }
 
     footer {
