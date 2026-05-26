@@ -253,16 +253,33 @@
     }
 
     #hoursTable {
-        width: 35%;          /* narrower table = shorter rows */
-        font-size: 11px;     /* smaller text = shorter height */
-        margin: 0 auto;      /* keeps it centered */
-        margin-bottom: -20px;   /* space below table */
-    }
+            width: 100%;
+            max-width: 300px;
+            margin-top: 75px;
+            margin: 20px auto 0 auto;   /* centered inside its column */
+            border-collapse: collapse;
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            font-size: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
 
-    #hoursTable td,
-    #hoursTable th {
-        padding: 2px 4px;    /* VERY short rows */
-    }
+        #hoursTable th {
+            background: #FFA500;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #hoursTable td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #hoursTable tr:last-child td {
+            border-bottom: none;
+        }
 
     h4 {
         width: 70%;
