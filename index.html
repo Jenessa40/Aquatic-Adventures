@@ -196,60 +196,51 @@
             padding: 1rem;
         }
 
-        /* 1. Make layout fluid and mobile-friendly */
+         /* Reset basic spacing for consistency */
         body {
             margin: 0;
             padding: 0;
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
         }
 
-        /* 2. Make images scale inside small screens */
-        img {
-            max-width: 100%;
-            height: auto; /* keeps proportions */
-        }
-        /* supported technique [InlineCitation-1-HTML Responsive Web Design](https://www.w3schools.com/html/html_responsive.asp) [InlineCitation-2-HTML & CSS Responsive Design](https://www.w3schools.com/htmlcss/htmlcss_responsive_design.asp) */
-
-
-        /* 3. Base mobile-first layout: column stacking */
+        /* Layout container that scales fluidly */
         .container {
-            display: flex;
-            flex-direction: column;
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
             padding: 16px;
-            gap: 16px;
         }
 
-        /* 4. Responsive text that scales a bit */
-            h1, h2, h3, p {
-            font-size: clamp(1rem, 4vw, 1.3rem); /* fluid typography [InlineCitation-2-HTML & CSS Responsive Design](https://www.w3schools.com/htmlcss/htmlcss_responsive_design.asp) */
-        }
-
-        /* 5. Smartphone styles: screens 600px and below */
-        @media screen and (max-width: 600px) { /* typical smartphone breakpoint [InlineCitation-3-Responsive Web Design Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp) */
-            .container {
-             padding: 12px;
-            }
-
-        nav, header, footer {
+        h1 {
+            font-size: 8vw; /* Responsive text size [InlineCitation-1-HTML Responsive Web Design](https://www.w3schools.com/html/html_responsive.asp) [InlineCitation-4-HTML Responsive Web Design (With Examples)](https://www.programiz.com/html/responsive-web-design) */
             text-align: center;
         }
 
-        .card {
-            width: 100%;     /* fit each card full width */
-            padding: 12px;
-            box-sizing: border-box;
-            }
+        p {
+            font-size: 4vw; /* Scales smoothly on phones */
+            line-height: 1.5;
         }
 
-        /* 6. Tablet and up (optional) */
-        @media screen and (min-width: 601px) {
-        .container {
-            flex-direction: row; /* side-by-side layout on larger screens */
-            flex-wrap: wrap;
+        /* Responsive image (scales down but not up unnecessarily) [InlineCitation-1-HTML Responsive Web Design](https://www.w3schools.com/html/html_responsive.asp) [InlineCitation-4-HTML Responsive Web Design (With Examples)](https://www.programiz.com/html/responsive-web-design) */
+        img.responsive {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
         }
-    }
+
+        /* Optional mobile tweak: reduce padding on very small screens */
+        @media screen and (max-width: 600px) { /* Using mobile breakpoint [InlineCitation-2-HTML Mobile](https://www.w3schools.com/html/html_mobile.asp) */
+            .container {
+                padding: 10px;
+            }
+            p {
+                font-size: 4.5vw;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- About Us at Top -->
