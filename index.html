@@ -126,12 +126,12 @@
             max-width: 250px;   /* was 300–350px */
             width: 100%;
             height: auto;
-        }
-
+    }
         .layout img {
-            max-width: 250px;   /* was 300–350px */
-            width: 100%;
+            max-width: 300px;
             height: auto;
+            border-radius: 8px;
+            margin-top: 100px;
         }
 
         h3 {
@@ -157,18 +157,18 @@
         }
 
         h4 {
-        width: 90%;
-        max-width: 600px;
-        margin: 30px auto;
+            width: 90%;
+         max-width: 500px;
+        margin: 0 0 20px 20px;   /* LEFT aligned */
         padding: 12px 16px;
-        text-align: center;
+        text-align: left;
         font-size: 16px;
         line-height: 1.4;
         border: 2px solid #333;
         border-radius: 8px;
         background-color: #f1f8f5;
-        box-sizing: border-box;
-
+        clear: both;               /* prevents overlap with table */
+        display: block;            /* ensures left alignment */
         
         .star {
         color: gold;       /* Yellow color */
@@ -282,21 +282,18 @@
 
     .layout {
         flex-direction: row;
-        gap: 10px;              /* smaller gap so everything fits */
-        justify-content: center;
-        align-items: flex-start;
+        gap: 10px;
+        margin-top: 20px;
     }
 
     .layout img {
-        max-width: 25%;         /* shrink images so table gets room */
-        height: auto;
+        max-width: 30%;
+        margin-top: 0;
     }
 
     #hoursTable {
-        width: 50%;             /* more room for the table */
-        max-width: none;
+        width: 40%;
         margin: 0 auto;
-        font-size: 13px;
     }
 
     h4 {
