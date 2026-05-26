@@ -198,26 +198,34 @@
         }
  @media (max-width: 768px) and (orientation: portrait) {
 
+    /* ===== PORTRAIT PHONE — KEEP NAVBAR HORIZONTAL ===== */
+@media (max-width: 768px) and (orientation: portrait) {
+
     .navbar {
-        flex-direction: column;
-        padding: 0.5rem;
+        flex-direction: row;          /* stay horizontal */
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        height: auto;
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 0.5rem;
+        flex-direction: row;          /* keep links in a row */
+        gap: 0.8rem;                  /* smaller spacing */
+        flex-wrap: nowrap;            /* prevent wrapping */
     }
 
-    .layout {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px;
+    .nav-links li {
+        margin: 0;                    /* remove desktop spacing */
     }
 
-    .layout img {
-        max-width: 90%;
+    .nav-links a {
+        font-size: 14px;              /* slightly smaller text */
     }
+
+    .logo {
+        font-size: 1.2rem;            /* shrink logo so everything fits */
+    }
+}
 
     #hoursTable {
         width: 100%;
