@@ -123,17 +123,15 @@
 
         /* Left image container to center horizontally but keep top aligned */
         .left-image {
-            margin-top: 100px;
-            margin-bottom: -150px;
-            display: flex;
-            justify-content: left; /* center horizontally in its column */
+            max-width: 250px;   /* was 300–350px */
+            width: 100%;
+            height: auto;
         }
 
         .layout img {
-            max-width: 300px;
+            max-width: 250px;   /* was 300–350px */
+            width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin-top: 100px;
         }
 
         h3 {
@@ -282,18 +280,21 @@
 
     .layout {
         flex-direction: row;
-        gap: 10px;
-        margin-top: 20px;
+        gap: 10px;              /* smaller gap so everything fits */
+        justify-content: center;
+        align-items: flex-start;
     }
 
     .layout img {
-        max-width: 30%;
-        margin-top: 0;
+        max-width: 25%;         /* shrink images so table gets room */
+        height: auto;
     }
 
     #hoursTable {
-        width: 40%;
+        width: 50%;             /* more room for the table */
+        max-width: none;
         margin: 0 auto;
+        font-size: 13px;
     }
 
     h4 {
