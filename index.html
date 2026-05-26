@@ -199,6 +199,54 @@
   /* ===== VERTICAL PHONE (PORTRAIT) ===== */
 /* ===== BULLETPROOF PORTRAIT MODE ===== */
 @media (max-width: 768px) and (orientation: portrait) {
+    /* === 3-COLUMN LAYOUT GOES HERE === */
+    .layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+        justify-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .layout img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    #hoursTable {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    /* === MOBILE VERSION BELOW THIS === */
+    @media (max-width: 768px) {
+        .layout {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .layout img {
+            max-width: 90%;
+        }
+
+        #hoursTable {
+            max-width: 90%;
+        }
+    }
+
+    .layout {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 150px;
+    }
 
     .layout {
         flex-direction: column !important;
