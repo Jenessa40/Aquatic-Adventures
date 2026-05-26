@@ -196,132 +196,78 @@
 
             font-size: 12px;
         }
-  /* ===== VERTICAL PHONE (PORTRAIT) ===== */
-/* ===== BULLETPROOF PORTRAIT MODE ===== */
-@media (max-width: 768px) and (orientation: portrait) {
-    /* === 3-COLUMN LAYOUT GOES HERE === */
+ @media (max-width: 768px) and (orientation: portrait) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
     .layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 40px;
-        align-items: start;
-        justify-items: center;
-        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
         padding: 20px;
     }
 
     .layout img {
-        width: 100%;
-        max-width: 350px;
-        height: auto;
-        border-radius: 10px;
+        max-width: 90%;
     }
 
     #hoursTable {
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
-        border-collapse: collapse;
-        text-align: center;
-    }
-
-    /* === MOBILE VERSION BELOW THIS === */
-    @media (max-width: 768px) {
-        .layout {
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        .layout img {
-            max-width: 90%;
-        }
-
-        #hoursTable {
-            max-width: 90%;
-        }
-    }
-
-    .layout {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 150px;
-    }
-
-    .layout {
-        flex-direction: column !important;
-        gap: 20px !important;
-        margin: 0 auto !important;
-        align-items: center !important;
-    }
-
-    .layout img {
-        max-width: 90% !important;
-        margin: 10px 0 !important;
-    }
-
-    #hoursTable {
-        width: 90% !important;
-        margin: 20px auto !important;
+        max-width: 90%;
+        font-size: 14px;
     }
 
     h4 {
-        margin: 20px auto !important;
-        width: 90% !important;
-        text-align: center !important;
+        width: 90%;
+        font-size: 14px;
     }
 
-    .navbar {
-        flex-direction: column !important;
-        height: auto !important;
-        padding: 0.5rem !important;
-    }
-
-    .nav-links {
-        flex-direction: column !important;
+    footer {
+        font-size: 10px;
+        padding: 10px 0;
     }
 }
 
-/* ===== HORIZONTAL PHONE (LANDSCAPE) ===== */
+/* ===========================
+   LANDSCAPE PHONES
+   =========================== */
 @media (max-height: 500px) and (orientation: landscape) {
 
     .navbar {
-        height: auto;
         padding: 0.3rem 1rem;
     }
 
-    .page-header {
-        padding: 2rem 1rem 1rem;
-        background-size: auto 100%;
-    }
-
     .layout {
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
-        margin-top: 20px;
     }
 
     .layout img {
-        max-width: 40%;
-        margin-top: 0;
+        max-width: 80%;
     }
 
     #hoursTable {
-        width: 60%;
-        margin: 0 auto;
+        max-width: 80%;
+        font-size: 13px;
     }
 
     h4 {
         width: 80%;
-        margin: 10px auto;
         font-size: 12px;
     }
 
     footer {
         font-size: 10px;
-        padding: 5px 0;
     }
-}     
+}
+        
     </style>
 </head>
 
