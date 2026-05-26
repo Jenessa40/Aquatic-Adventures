@@ -220,9 +220,22 @@
     }
 
     #hoursTable {
-        max-width: 90%;
-        font-size: 14px;
+        width: 100%;
+        max-width: 280px;      /* smaller width */
+        margin: 10px auto;     /* less spacing */
+        border-collapse: collapse;
+        text-align: center;
+        font-size: 14px;       /* smaller text */
     }
+
+    #hoursTable th {
+        padding: 6px 4px;      /* smaller header padding */
+        font-size: 15px;
+    }
+
+    #hoursTable td {
+        padding: 4px 4px;      /* smaller row padding */
+        border-bottom: 1px solid #ccc;
 
     h4 {
         width: 90%;
