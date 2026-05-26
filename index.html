@@ -275,7 +275,6 @@
 
 
 /* ===== HORIZONTAL PHONE (LANDSCAPE) ===== */
-
 @media (max-height: 500px) and (orientation: landscape) {
 
     .navbar {
@@ -284,7 +283,7 @@
     }
 
     .page-header {
-        padding: 2rem 1rem 1rem;
+        padding: 1.5rem 1rem 1rem;
         background-size: cover;
         background-position: center;
         width: 100%;
@@ -292,31 +291,34 @@
 
     .layout {
         flex-direction: row;
-        gap: 20px;          /* balanced spacing */
-        margin-top: 20px;
         justify-content: center;
         align-items: flex-start;
+        gap: 25px;              /* balanced spacing */
+        margin-top: 10px;
     }
 
     .layout img {
-        max-width: 22%;     /* smaller images so table fits */
+        max-width: 20%;         /* MUCH smaller images */
+        height: auto;
         margin-top: 0;
     }
 
     #hoursTable {
-        width: 32%;         /* wider than before, but still compact */
+        width: 30%;             /* narrower table */
+        max-width: none;
+        font-size: 11px;        /* shorter rows */
         margin: 0;
-        font-size: 13px;
     }
 
     #hoursTable td,
     #hoursTable th {
-        padding: 5px 6px;
+        padding: 3px 4px;       /* SHORT rows */
+        border-bottom: 1px solid #ccc;
     }
 
     h4 {
         width: 70%;
-        margin: 10px auto 10px 40px;  /* slightly toward center */
+        margin: 10px auto 10px 40px;
         font-size: 12px;
         text-align: left;
         display: block;
