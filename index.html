@@ -275,7 +275,8 @@
 
 
 /* ===== HORIZONTAL PHONE (LANDSCAPE) ===== */
-@media (max-height: 500px) and (orientation: landscape) {
+
+   @media (max-height: 500px) and (orientation: landscape) {
 
     .navbar {
         height: auto;
@@ -293,21 +294,21 @@
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
-        gap: 25px;              /* balanced spacing */
+        gap: 30px;              /* balanced spacing */
         margin-top: 10px;
     }
 
     .layout img {
-        max-width: 20%;         /* MUCH smaller images */
+        max-width: 18%;         /* smaller images so table fits */
         height: auto;
         margin-top: 0;
     }
 
     #hoursTable {
-        width: 30%;             /* narrower table */
-        max-width: none;
+        width: 28%;             /* PERFECT width for landscape */
         font-size: 11px;        /* shorter rows */
-        margin: 0;
+        margin: 0 auto;         /* centers the table */
+        border-collapse: collapse;
     }
 
     #hoursTable td,
@@ -330,8 +331,7 @@
         font-size: 10px;
         padding: 5px 0;
     }
-}
-
+} 
     </style>
 </head>
 
