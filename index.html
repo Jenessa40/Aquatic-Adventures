@@ -299,8 +299,11 @@
 
     h4 {
         width: 80%;
-        margin: 10px auto;
+        margin: 10px 0 10px 20px;   /* LEFT aligned */
         font-size: 12px;
+        text-align: left;           /* make text left-aligned */
+        display: block;             /* ensures left alignment works */
+        clear: both;                /* keeps it below the layout */
     }
 
     footer {
