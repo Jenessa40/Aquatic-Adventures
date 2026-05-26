@@ -141,20 +141,35 @@
         }
 
         /* === Table Styles === */
+        /* CLEAN RESPONSIVE HOURS TABLE */
         #hoursTable {
-            margin-top: 20px;
-            margin-left: auto;   
-            margin-right: auto;
-            margin-bottom: -200px;  
-            border-collapse: collapse; 
-            text-align: center; 
-             
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto 0 auto;   /* centered inside its column */
+            border-collapse: collapse;
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            font-size: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        #hoursTable th {
+            background: #FFA500;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
         }
 
         #hoursTable td {
-        padding: 10px 12px;
-        border-bottom: 1px solid #ddd;
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
         }
+
+        #hoursTable tr:last-child td {
+            border-bottom: none;
+        }
+
 
         h4 {
             width: 90%;
@@ -203,7 +218,7 @@
 
             font-size: 12px;
         }
- @media (max-width: 768px) and (orientation: portrait) {
+
 
     /* ===== PORTRAIT PHONE — KEEP NAVBAR HORIZONTAL ===== */
 @media (max-width: 768px) and (orientation: portrait) {
@@ -232,26 +247,17 @@
     .logo {
         font-size: 1.2rem;            /* shrink logo so everything fits */
     }
-}
 
     #hoursTable {
-        width: 100%;
-        max-width: 280px;      /* smaller width */
-        margin: 10px auto;     /* less spacing */
-        border-collapse: collapse;
-        text-align: center;
-        font-size: 14px;       /* smaller text */
+        max-width: 260px;
+        font-size: 14px;
     }
 
+    #hoursTable td,
     #hoursTable th {
-        padding: 6px 4px;      /* smaller header padding */
-        font-size: 15px;
+        padding: 6px 6px;
     }
-
-    #hoursTable td {
-        padding: 4px 4px;      /* smaller row padding */
-        border-bottom: 1px solid #ccc;
-    }
+    
 
     h4 {
         width: 90%;
@@ -293,8 +299,14 @@
     }
 
     #hoursTable {
-        width: 40%;
-        margin: 0 auto;
+        width: 45%;        /* gives it more room */
+        max-width: none;
+        font-size: 13px;
+    }
+
+    #hoursTable td,
+    #hoursTable th {
+        padding: 5px 6px;
     }
 
     h4 {
