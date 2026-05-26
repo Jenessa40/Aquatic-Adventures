@@ -236,50 +236,28 @@
         background-position: center;
         width: 100%;
     }
-
     .layout {
-        flex-direction: row;
-        gap: 40px;
-        margin-top: -10px;   /* pulls layout UP */
-    }
-
-    .layout img {
-        order: 2;
-        max-width: 25px;         /* smaller images so table fits */
-        height: auto;
-        margin-top: -10px;
-        gap: 40px;
+        display: flex;
+        flex-direction: column;   /* stack table, then pictures */
+        align-items: center;
+        gap: 12px;                /* space between table and pictures */
+        margin-top: 0;
     }
 
     #hoursTable {
-            order: 1;
-            width: 100%;
-            max-width: 500px;
-            margin-top: 50px;
-            margin: 20px auto 0 auto;   /* centered inside its column */
-            border-collapse: collapse;
-            background: #ffffff;
-            border-radius: 10px;
-            overflow: hidden;
-            font-size: 15px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        }
+        order: 1;                 /* show FIRST */
+        width: 80%;
+        max-width: 400px;
+        margin: 0 auto;
+        font-size: 12px;
+    }
 
-        #hoursTable th {
-            background: #FFA500;
-            color: white;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        #hoursTable td {
-            padding: 8px 10px;
-            border-bottom: 1px solid #eee;
-        }
-
-        #hoursTable tr:last-child td {
-            border-bottom: none;
-        }
+    .layout img {
+        order: 2;                 /* show AFTER table */
+        max-width: 40%;           /* bigger pictures */
+        height: auto;
+        margin: 0 5px;
+    }
 
     h4 {
         width: 70%;
