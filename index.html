@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Aquatic Adventures - Home</title>
     <style>
         * {
@@ -19,45 +20,40 @@
         }
 
         /* ===== VERTICAL PHONE (PORTRAIT) ===== */
+/* ===== BULLETPROOF PORTRAIT MODE ===== */
 @media (max-width: 768px) and (orientation: portrait) {
 
-    .navbar {
-        flex-direction: center;
-        height: auto;
-        padding: 0.5rem;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        margin-top: 0.5rem;
-    }
-
     .layout {
-        flex-direction: center;
-        gap: 20px;
-        align-items: center;
-        margin-top: 20px;
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin: 0 auto !important;
+        align-items: center !important;
     }
 
     .layout img {
-        max-width: 90%;
-        margin-top: 20px;
+        max-width: 90% !important;
+        margin: 10px 0 !important;
     }
 
     #hoursTable {
-        width: 90%;
-        margin: 20px auto;
+        width: 90% !important;
+        margin: 20px auto !important;
     }
 
     h4 {
-        width: 90%;
-        margin: 20px auto;
-        text-align: center;
+        margin: 20px auto !important;
+        width: 90% !important;
+        text-align: center !important;
     }
 
-    footer {
-        font-size: 10px;
-        padding: 10px 0;
+    .navbar {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 0.5rem !important;
+    }
+
+    .nav-links {
+        flex-direction: column !important;
     }
 }
 
