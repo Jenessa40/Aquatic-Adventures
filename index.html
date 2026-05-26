@@ -174,7 +174,6 @@
             right: 20px;            /* distance from right side */
             padding: 8px 16px;      /* small button size */
             font-size: 14px;
-            background-color: #FFA500;
             color: white;
             border: none;
             border-radius: 5px;
@@ -182,8 +181,19 @@
             transition: 0.2s ease;
         }
 
-        .login-btn:hover {
-            background-color: #005fa3;
+
+        /* Fixed footer that stays at the bottom of the screen */
+        footer {
+            left: 0;
+            bottom: 0;
+            width: auto;
+
+            background-color: #222; /* dark background */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+
+            font-size: 2px;
         }
 
         /* Reset basic spacing for consistency */
@@ -294,6 +304,10 @@
     </h4>
 
     <button onclick="window.location.href='login.html';">Login</button>
+
+    <footer class="page-footer">
+        <p>&copy; 2026 Aquatice Adventures. All rights reserved.</p>
+    </footer>
 
 
     </body>
