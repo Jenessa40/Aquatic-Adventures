@@ -223,7 +223,7 @@
 
 
     /* ===== PORTRAIT PHONE — KEEP NAVBAR HORIZONTAL ===== */
-@media (max-height: 750px) and (orientation: landscape) {
+@media (max-height: 500px) and (orientation: landscape) {
 
     .navbar {
         height: auto;
@@ -238,13 +238,13 @@
     }
     
    .layout {
-        display: grid;
+       display: grid;
         grid-template-columns: 1fr 1fr;   /* 2 columns */
         grid-template-rows: auto auto;    /* 2 rows */
-        gap: 20px;
+        gap: 10px;
         width: 100%;
-        justify-items: center;
         align-items: start;
+        justify-items: start; /* ⭐ Everything aligns left by default */
     }
 
     /* TABLE — put in Row 1, Column 1 */
