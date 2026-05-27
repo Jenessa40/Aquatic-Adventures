@@ -310,10 +310,10 @@
     /* Bottom-right: Aquatic image */
     .layout img[src*="aquatic"] {
         grid-row: 2;
-        grid-column: 2;
+    grid-column: 1 / -1;   /* ⭐ spans BOTH columns */
 
-        max-width: 90%;
-        margin: 10px auto 0 auto;   /* ⭐ centers horizontally */
+    max-width: 300px;
+    margin: 10px auto;     /* ⭐ centers horizontally */
     }
 }
     
