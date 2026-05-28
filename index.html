@@ -248,15 +248,21 @@
     }
 
     .navbar {
-        flex-direction: column;   /* stack logo + links */
+        display: flex;
+        flex-direction: row;      /* keep everything in a row */
+        justify-content: space-between;
         align-items: center;
+        white-space: nowrap;      /* prevents wrapping */
+        overflow-x: auto;         /* allows scrolling if needed */
     }
 
     .nav-links {
-        flex-direction: column;   /* stack the links vertically */
-        gap: 10px;
-        margin-top: 10px;
+        display: flex;
+        flex-direction: row;      /* keep links horizontal */
+        gap: 15px;
+        white-space: nowrap;      /* prevents wrapping */
     }
+
 
     .page-header {
         padding: 4rem 1rem 1rem;
