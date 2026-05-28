@@ -4,61 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquatic Adventures - Contact Us</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquatic Adventures - Location</title>
+
     <style>
+        /* RESET */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%;
+        }
+
         body {
+            display: flex;
+            flex-direction: column;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
             background-color: seashell;
         }
 
-
-       /* Navigation Bar */
+        /* NAVBAR (same style you approved) */
         .navbar {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            padding: 0 10px;
+            height: 55px;
+            background-color: #FFA500;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
 
-        gap: 20px;               /* space between logo and links */
-        padding: 0 10px;
+        .logo {
+            flex-shrink: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #008080;
+        }
 
-        height: 55px;            /* lock navbar height */
-        overflow-x: auto;        /* allow sideways scroll */
-        overflow-y: hidden;      /* prevent dropping down */
-        white-space: nowrap;     /* keep everything on one line */
-    }
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            flex-shrink: 0;
+            white-space: nowrap;
+            list-style: none;
+        }
 
-    .logo {
-        flex-shrink: 0;          /* prevents logo from squishing or wrapping */
-        font-size: 18px;
-    }
+        .nav-links a {
+            text-decoration: none;
+            color: #008080;
+            font-weight: bold;
+            font-size: 14px;
+        }
 
-    .nav-links {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-
-        flex-shrink: 0;          /* prevents links from wrapping */
-        white-space: nowrap;
-    }
-
-    .nav-links li {
-        list-style: none;
-    }
-
-    .nav-links a {
-        font-size: 14px;         /* slightly smaller for mobile */
-        text-decoration: none;
-    }
-
-    /* Page Header */
+        /* PAGE HEADER */
         .page-header {
             padding: 6rem 2rem 2rem;
             text-align: left;
@@ -66,146 +76,96 @@
             color: #FFA500;
         }
 
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+        /* MAIN CONTENT */
+        .contact-container {
+            flex: 1; /* pushes footer down */
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
         }
 
-        .page-header p {
-            font-size: 1.2rem;
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
         }
 
-        /* Map Section */
+        .contact-info h2 {
+            color: #FFA500;
+            margin-bottom: 1rem;
+        }
+
         .map {
-            margin-top: 25px;
+            margin-top: 20px;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-
-        /* 1. Make layout fluid and mobile-friendly */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-        }
-
-        /* 2. Make images scale inside small screens */
-        img {
-            max-width: 100%;
-            height: auto; /* keeps proportions */
-        }
-/* supported technique [InlineCitation-1-HTML Responsive Web Design](https://www.w3schools.com/html/html_responsive.asp) [InlineCitation-2-HTML & CSS Responsive Design](https://www.w3schools.com/htmlcss/htmlcss_responsive_design.asp) */
-
-
-        /* 3. Base mobile-first layout: column stacking */
-        .container {
-            display: flex;
-            flex-direction: column;
-            padding: 16px;
-            gap: 16px;
-        }
-
-        /* 4. Responsive text that scales a bit */
-        h1, h2, h3, p {
-            font-size: clamp(1rem, 4vw, 1.3rem); /* fluid typography [InlineCitation-2-HTML & CSS Responsive Design](https://www.w3schools.com/htmlcss/htmlcss_responsive_design.asp) */
-        }
-
-        /* 5. Smartphone styles: screens 600px and below */
-        @media screen and (max-width: 600px) { /* typical smartphone breakpoint [InlineCitation-3-Responsive Web Design Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp) */
-            .container {
-                padding: 12px;
-        }
-        }
-
-        nav, header, footer {
-            text-align: center;
-        }
-
-        .card {
-            width: 100%;     /* fit each card full width */
-            padding: 12px;
-            box-sizing: border-box;
-    }
-
-
-        /* 6. Tablet and up (optional) */
-        @media screen and (min-width: 601px) {
-            .container {
-                flex-direction: row; /* side-by-side layout on larger screens */
-                flex-wrap: wrap;
-            }
-        }
-
-    
-    /* Fixed footer that stays at the bottom of the screen */
+        /* FOOTER */
         footer {
-            left: 0;
-            bottom: 0;
-            width: auto;
-
-            background-color: #222; /* dark background */
+            width: 100%;
+            background-color: #222;
             color: white;
             text-align: center;
             padding: 15px 0;
-
             font-size: 12px;
+            margin-top: auto; /* keeps footer at bottom */
         }
-        
     </style>
 </head>
+
 <body>
 
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Aquatic Adventures</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fish.html">Fish</a></li>
-                <li><a href="products.html">Fish Supplies</a></li>
-                <li><a href="reptiles.html">Reptiles</a></li>
-                <li><a href="location.html">Location</a></li>
-                <!-- Facebook icon link -->
-                <li>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Aquatic Adventures</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fish.html">Fish</a></li>
+            <li><a href="products.html">Fish Supplies</a></li>
+            <li><a href="reptiles.html">Reptiles</a></li>
+            <li><a href="location.html">Location</a></li>
+
+            <li>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-                <a href="https://www.facebook.com/people/Aquatic-Adventures/61558479800656/" 
-                   class="facebook-link" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   aria-label="Visit our Facebook page">
+                <a href="https://www.facebook.com/people/Aquatic-Adventures/61558479800656/"
+                   class="facebook-link"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     <i class="fab fa-facebook"></i>
                 </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+            </li>
+        </ul>
+    </nav>
 
-    <!-- Contact Section -->
+    <!-- MAIN CONTENT -->
     <section class="contact-container">
-        <!-- Store Info -->
         <div class="contact-info">
             <h2>Location</h2>
             <p><strong>Address:</strong> 2624 23rd St, Columbus, NE 68601</p>
             <p><strong>Phone:</strong> (402) 835-9884</p>
+
             <div class="map">
-                <!-- Google Maps Embed -->
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.123456789!2d-97.3599696!3d41.4390927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8790ebfa4c41d951%3A0xeeb05bf9b47925e2!2s2624%2023rd%20St%2C%20Columbus%2C%20NE%2068601!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" 
                     width="100%" 
                     height="250" 
                     style="border:0;" 
-                    allowfullscreen="" 
+                    allowfullscreen 
                     loading="lazy">
                 </iframe>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Aquatice Adventures. All rights reserved.</p>
+        <p>&copy; 2026 Aquatic Adventures. All rights reserved.</p>
     </footer>
 
 </body>
