@@ -18,64 +18,44 @@
             background-color: seashell;
         }
 
-        /* Navigation Bar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #FFA500;
-            padding: 1rem 2rem;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #008080;
-        }
 
        /* Navigation Bar */
         .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
             display: flex;
-            justify-content: space-between;
+            flex-direction: row;
             align-items: center;
-            background-color: #FFA500;
-            padding: 1rem 2rem;
-            z-index: 1000;
+            justify-content: flex-start;
+
+            gap: 20px;               /* space between logo and links */
+            padding: 0 10px;
+
+            height: 55px;            /* lock navbar height */
+            overflow-x: auto;        /* allow sideways scroll */
+            overflow-y: hidden;      /* prevent dropping down */
+            white-space: nowrap;     /* keep everything on one line */
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color:#008080;
+            flex-shrink: 0;          /* prevents logo from squishing or wrapping */
+            font-size: 18px;
         }
 
         .nav-links {
-            list-style: none;
             display: flex;
+            flex-direction: row;
+            gap: 15px;
+
+            flex-shrink: 0;          /* prevents links from wrapping */
+            white-space: nowrap;
         }
 
         .nav-links li {
-            margin-left: 1.5rem;
+            list-style: none;
         }
 
         .nav-links a {
+            font-size: 14px;         /* slightly smaller for mobile */
             text-decoration: none;
-            color: #008080;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #3713ba;
         }
 
         /* Page Header */
@@ -93,48 +73,6 @@
 
         .page-header p {
             font-size: 1.2rem;
-        }
-
-
-        /* Contact Section */
-        .contact-container {
-            max-width: auto;
-            margin-top: -50px;
-            padding: 6rem 2rem 2rem; /* Extra top padding for navbar */
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .contact-info {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .contact-info h2 {
-            color: #FFA500;
-            margin-bottom: 1rem;
-        }
-
-        .contact-info p {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-form button {
-            margin-top: 1rem;
-            background-color: #008080;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .contact-form button:hover {
-            background-color: #e67e22;
         }
 
         /* Map Section */
@@ -202,17 +140,15 @@
 
     /* Footer */
     footer {
-            left: 0;
-            bottom: 0;
-            width: auto;
+    width: 100%;              /* full width */
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 12px;
+    margin-top: auto;         /* forces footer to bottom */
+}
 
-            background-color: #222; /* dark background */
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-
-            font-size: 12px;
-        }
     </style>
 </head>
 <body>
