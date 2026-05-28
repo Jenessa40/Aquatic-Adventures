@@ -21,44 +21,44 @@
 
        /* Navigation Bar */
         .navbar {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
 
-            gap: 20px;               /* space between logo and links */
-            padding: 0 10px;
+        gap: 20px;               /* space between logo and links */
+        padding: 0 10px;
 
-            height: 55px;            /* lock navbar height */
-            overflow-x: auto;        /* allow sideways scroll */
-            overflow-y: hidden;      /* prevent dropping down */
-            white-space: nowrap;     /* keep everything on one line */
-        }
+        height: 55px;            /* lock navbar height */
+        overflow-x: auto;        /* allow sideways scroll */
+        overflow-y: hidden;      /* prevent dropping down */
+        white-space: nowrap;     /* keep everything on one line */
+    }
 
-        .logo {
-            flex-shrink: 0;          /* prevents logo from squishing or wrapping */
-            font-size: 18px;
-        }
+    .logo {
+        flex-shrink: 0;          /* prevents logo from squishing or wrapping */
+        font-size: 18px;
+    }
 
-        .nav-links {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
 
-            flex-shrink: 0;          /* prevents links from wrapping */
-            white-space: nowrap;
-        }
+        flex-shrink: 0;          /* prevents links from wrapping */
+        white-space: nowrap;
+    }
 
-        .nav-links li {
-            list-style: none;
-        }
+    .nav-links li {
+        list-style: none;
+    }
 
-        .nav-links a {
-            font-size: 14px;         /* slightly smaller for mobile */
-            text-decoration: none;
-        }
+    .nav-links a {
+        font-size: 14px;         /* slightly smaller for mobile */
+        text-decoration: none;
+    }
 
-        /* Page Header */
+    /* Page Header */
         .page-header {
             padding: 6rem 2rem 2rem;
             text-align: left;
@@ -138,17 +138,21 @@
             }
         }
 
-    /* Footer */
-    footer {
-    width: 100%;              /* full width */
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 12px;
-    margin-top: auto;         /* forces footer to bottom */
-}
+    
+    /* Fixed footer that stays at the bottom of the screen */
+        footer {
+            left: 0;
+            bottom: 0;
+            width: auto;
 
+            background-color: #222; /* dark background */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+
+            font-size: 12px;
+        }
+        
     </style>
 </head>
 <body>
