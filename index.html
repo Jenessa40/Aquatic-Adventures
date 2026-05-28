@@ -248,21 +248,19 @@
     }
 
     .navbar {
-        display: flex;
-        flex-direction: row;      /* keep everything in a row */
-        justify-content: space-between;
-        align-items: center;
-        white-space: nowrap;      /* prevents wrapping */
-        overflow-x: auto;         /* allows scrolling if needed */
+        height: 50px;            /* locks the bar height */
+        overflow-x: auto;        /* scrolls sideways if needed */
+        overflow-y: hidden;      /* prevents downward expansion */
     }
+
 
     .nav-links {
-        display: flex;
-        flex-direction: row;      /* keep links horizontal */
-        gap: 15px;
-        white-space: nowrap;      /* prevents wrapping */
+        flex-wrap: nowrap;       /* absolutely no wrapping */
     }
 
+    .nav-links a {
+        font-size: 14px;
+    }
 
     .page-header {
         padding: 4rem 1rem 1rem;
