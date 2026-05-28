@@ -248,8 +248,14 @@
     }
 
     .navbar {
-        padding: 0.5rem 1rem;
-        height: auto;
+        flex-direction: column;   /* stack logo + links */
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;   /* stack the links vertically */
+        gap: 10px;
+        margin-top: 10px;
     }
 
     .page-header {
