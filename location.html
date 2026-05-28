@@ -20,166 +20,62 @@
     <title>Aquatic Adventures - Location</title>
 
     <style>
-        /* RESET */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            font-family: Arial, sans-serif;
-            background-color: seashell;
-        }
-
-        /* NAVBAR */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;  /* logo left, links right */
-
-            padding: 0 15px;
-            height: 55px;                    /* consistent height */
-            background-color: #FFA500;
-
-            white-space: nowrap;
-            overflow-x: auto;                /* scrolls sideways on small screens */
-            overflow-y: hidden;
-
-            z-index: 1000;
+    /* RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-        .logo {
-            flex-shrink: 0;
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #008080;
+    html, body {
+        height: 100%;
     }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            gap: 18px;
-            flex-shrink: 0;
-    }
-
-        .nav-links li {
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #008080;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        /* PAGE HEADER */
-        .page-header {
-            padding: 6rem 2rem 2rem;
-            text-align: left;
-            background: url('locationphoto.jpg') no-repeat center center/cover;
-            color: #FFA500;
-        }
-
-        /* MAIN CONTENT */
-        .contact-container {
-            flex: 1; /* pushes footer down */
-            display: flex;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        .contact-info {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .contact-info h2 {
-            color: #FFA500;
-            margin-bottom: 1rem;
-        }
-
-        .map {
-            margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        /* FOOTER */
-        footer {
-            left: 0;
-            bottom: 0;
-            width: auto;
-
-            background-color: #222; /* dark background */
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-
-            font-size: 12px;
-        }
-
-        /* ===== PORTRAIT PHONES ===== */
-@media (max-width: 768px) and (orientation: portrait) {
-
-    .layout {
+    body {
+        min-height: 100dvh;          /* fixes mobile viewport gap */
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        font-family: Arial, sans-serif;
+        background-color: seashell;
+        padding-top: 55px;           /* so content isn't under navbar */
     }
 
-    .layout img {
-        max-width: 90%;
-        margin-top: 20px;
-    }
-
+    /* NAVBAR */
     .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between;  /* logo left, links right */
 
-        gap: 20px;               /* space between logo and links */
-        padding: 0 10px;
+        padding: 0 15px;
+        height: 55px;                    /* consistent height */
+        background-color: #FFA500;
 
-        height: 55px;            /* lock navbar height */
-        overflow-x: auto;        /* allow sideways scroll */
-        overflow-y: hidden;      /* prevent dropping down */
-        white-space: nowrap;     /* keep everything on one line */
+        white-space: nowrap;
+        overflow-x: auto;                /* scrolls sideways on small screens */
+        overflow-y: hidden;
+
+        z-index: 1000;
     }
 
     .logo {
-        flex-shrink: 0;          /* prevents logo from squishing or wrapping */
-        font-size: 18px;
+        flex-shrink: 0;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #008080;
     }
 
     .nav-links {
+        list-style: none;
         display: flex;
         flex-direction: row;
-        gap: 15px;
-
-        flex-shrink: 0;          /* prevents links from wrapping */
-        white-space: nowrap;
+        gap: 18px;
+        flex-shrink: 0;
     }
 
     .nav-links li {
@@ -187,31 +83,88 @@
     }
 
     .nav-links a {
-        font-size: 14px;         /* slightly smaller for mobile */
         text-decoration: none;
+        color: #008080;
+        font-weight: bold;
+        font-size: 14px;
     }
 
+    /* PAGE HEADER (not used here but kept if needed) */
     .page-header {
-        padding: 4rem 1rem 1rem;
-        background-size: cover;
+        padding: 6rem 2rem 2rem;
+        text-align: left;
+        background: url('locationphoto.jpg') no-repeat center center/cover;
+        color: #FFA500;
+    }
+
+    /* MAIN CONTENT */
+    .contact-container {
+        flex: 1;                 /* makes content fill space and push footer down */
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .contact-info {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-info h2 {
+        color: #FFA500;
+        margin-bottom: 1rem;
+    }
+
+    .map {
+        margin-top: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     /* FOOTER */
-        footer {
-            left: 0;
-            bottom: 0;
-            width: auto;
+    footer {
+        width: 100%;
+        background-color: #222;  /* dark background */
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 12px;
+        margin-top: auto;        /* glue to bottom */
+    }
 
-            background-color: #222; /* dark background */
-            color: white;
-            text-align: center;
-            padding: 15px 0;
+    /* ===== PORTRAIT PHONES ===== */
+    @media (max-width: 768px) and (orientation: portrait) {
 
-            font-size: 12px;
+        .navbar {
+            justify-content: flex-start;
+            gap: 20px;
+            padding: 0 10px;
         }
-}
 
-    </style>
+        .logo {
+            font-size: 18px;
+        }
+
+        .nav-links {
+            gap: 15px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+        }
+
+        .page-header {
+            padding: 4rem 1rem 1rem;
+            background-size: cover;
+        }
+    }
+</style>
 </head>
 
 <body>
