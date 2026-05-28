@@ -248,18 +248,41 @@
     }
 
     .navbar {
-        height: 50px;            /* locks the bar height */
-        overflow-x: auto;        /* scrolls sideways if needed */
-        overflow-y: hidden;      /* prevents downward expansion */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 20px;               /* space between logo and links */
+        padding: 0 10px;
+
+        height: 55px;            /* lock navbar height */
+        overflow-x: auto;        /* allow sideways scroll */
+        overflow-y: hidden;      /* prevent dropping down */
+        white-space: nowrap;     /* keep everything on one line */
     }
 
+    .logo {
+        flex-shrink: 0;          /* prevents logo from squishing or wrapping */
+        font-size: 18px;
+    }
 
     .nav-links {
-        flex-wrap: nowrap;       /* absolutely no wrapping */
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+
+        flex-shrink: 0;          /* prevents links from wrapping */
+        white-space: nowrap;
+    }
+
+    .nav-links li {
+        list-style: none;
     }
 
     .nav-links a {
-        font-size: 14px;
+        font-size: 14px;         /* slightly smaller for mobile */
+        text-decoration: none;
     }
 
     .page-header {
