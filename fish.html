@@ -43,40 +43,40 @@
             top: 0;
             left: 0;
             width: 100%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            padding: 0 15px;
+            height: 55px;
             background-color: #FFA500;
-            padding: 1rem 2rem;
+
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+
             z-index: 1000;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            color:#008080;
-        }
+        color: #008080;
+            }
 
         .nav-links {
             list-style: none;
             display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 1.5rem;
+            gap: 18px;
         }
 
         .nav-links a {
             text-decoration: none;
             color: #008080;
             font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #3713ba;
-        }
-
+            font-size: 14px;
+    }
         /* Page Header */
         .page-header {
             padding: 6rem 2rem 2rem;
@@ -123,7 +123,7 @@
         .inventory-gallery h2 {
             font-size: 30px;
             color: #008080;
-    margin-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .inventory-grid {
@@ -140,18 +140,18 @@
 
         /* Container for images */
         .image-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         /* Make all images the same size */
         .image-gallery img {
-        width: 200px;       /* Fixed width */
-        height: 200px;      /* Fixed height */
-        object-fit: cover;  /* Crop to fill without distortion */
-        border-radius: 8px; /* Optional: rounded corners */
-        display: block;
+            width: 200px;       /* Fixed width */
+            height: 200px;      /* Fixed height */
+            object-fit: cover;  /* Crop to fill without distortion */
+            border-radius: 8px; /* Optional: rounded corners */
+            display: block;
         }
 
         .fish-section {
@@ -204,18 +204,30 @@
 
         
         /* Fixed footer that stays at the bottom of the screen */
-        footer {
-            left: 0;
-            bottom: 0;
-            width: auto;
-
-            background-color: #222; /* dark background */
+       footer {
+            width: 100%;
+            background-color: #222;
             color: white;
             text-align: center;
             padding: 15px 0;
-
             font-size: 12px;
+            margin-top: auto;
         }
+
+        /* Default: 2 images per row (portrait) */
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        /* Landscape: 3 images per row */
+        @media (orientation: landscape) {
+        .inventory-grid {
+            grid-template-columns: repeat(3, 1fr);
+    }
+}
+
         
     </style>
 </head>
