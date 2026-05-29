@@ -216,8 +216,39 @@
             grid-template-columns: repeat(4, 1fr);
     }
 }
+/* PORTRAIT PHONES — keep navbar horizontal */
+@media (max-width: 768px) and (orientation: portrait) {
 
-   </style>
+    .navbar {
+        height: 50px;
+        padding: 0 10px;
+        overflow-x: auto;     /* allows sideways scrolling if needed */
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    .logo {
+        font-size: 1.1rem;    /* smaller so everything fits */
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;            /* smaller spacing */
+        flex-wrap: nowrap;    /* THIS is the key */
+    }
+
+    .nav-links li {
+        flex-shrink: 0;       /* prevents items from squishing */
+    }
+
+    .nav-links a {
+        font-size: 13px;      /* slightly smaller text */
+    }
+}
+
+</style>
 </head>
 <body>
 
