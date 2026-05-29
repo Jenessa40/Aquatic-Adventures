@@ -214,6 +214,20 @@
 
             font-size: 12px;
         }
+
+        /* Default: 2 images per row (portrait) */
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        /* Landscape: 3 images per row */
+        @media (orientation: landscape) {
+        .inventory-grid {
+            grid-template-columns: repeat(3, 1fr);
+    }
+}
    </style>
 </head>
 <body>
