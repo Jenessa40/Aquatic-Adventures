@@ -277,6 +277,31 @@
         padding: 4rem 1rem 1rem;
         background-size: cover;
     }
+
+    /* ===== LANDSCAPE PHONES ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .product {
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .product img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
 }
 
     </style>
@@ -359,23 +384,23 @@
         
         <div class="product-grid">
             <div class="product">
-                <img id="myImage" src="Crickets.jpg" alt="Inventory Item 1">
+                <img src="Crickets.jpg">
                 <h3>Crickets</h3>
                 <p>$1.99 small/medium for 12</p>
                 <p>$2.99 large for 12</p>
             </div>
             <div class="product">
-                <img id="myImage" src="Dubias.jpg" alt="Inventory Item 2">
+                <img src="Dubias.jpg">
                 <h3>Dubia Roaches</h3>
                 <p>$19.53 for</p>
             </div>
             <div class="product">
-                <img id="myImage" src="Hornworms.jpg" alt="Inventory Item 3">
+                <img src="Hornworms.jpg">
                 <h3>Hornworms</h3>
                 <p>$1.06 for 1</p>
             </div>
             <div class="product">
-                <img id="myImage"    src="superworms.jpg" alt="Inventory Item 4">
+                <img src="superworms.jpg">
                 <h3>Superworms</h3>
                 <p>$6.77 for 25 count</p>
                 <p>$10.94 for 50 count</p>
