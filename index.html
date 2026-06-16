@@ -333,12 +333,13 @@
         justify-self: end;
     }
 
-    /* Bottom row: Aquatic image centered above testimony */
+    /* Bottom: Aquatic image centered under BOTH columns */
     .layout img[src*="aquatic"] {
         grid-row: 2;
-        grid-column: 1 / -1;   /* ⭐ spans BOTH columns */
+        grid-column: 1 / span 2;   /* ⭐ spans BOTH columns */
         max-width: 300px;
-        margin: 10px auto 0 auto;  /* ⭐ centers it */
+        margin: 30px auto 0 auto;  /* ⭐ adds nice spacing above */
+        display: block;            /* ⭐ ensures proper centering */
     }
 
     h4 {
