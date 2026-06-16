@@ -420,7 +420,11 @@
         <span class="star">&#9733;</span>
     </h4>
 
-    <button onclick="window.location.href='login.html';">Login</button>
+    <form action="login_process.php" method="post">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <button type="submit">Login</button>
+    </form>
 
     <footer class="page-footer">
         <p>&copy; 2026 Aquatice Adventures. All rights reserved.</p>
