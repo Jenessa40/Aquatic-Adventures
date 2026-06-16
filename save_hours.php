@@ -6,17 +6,18 @@ if (!isset($_SESSION['logged_in'])) {
 }
 
 $hours = [
+    "mon" => $_POST['mon'],
+    "tue" => $_POST['tue'],
     "wed" => $_POST['wed'],
     "thu" => $_POST['thu'],
     "fri" => $_POST['fri'],
     "sat" => $_POST['sat'],
-    "sun" => $_POST['sun'],
-    "mon" => $_POST['mon'],
-    "tue" => $_POST['tue']
+    "sun" => $_POST['sun']
 ];
 
-file_put_contents("hours.json", json_encode($hours));
+file_put_contents("hours.json", json_encode($hours, JSON_PRETTY_PRINT));
 
-header("Location: edit_hours.php?saved=1");
+header("Location: edit_hours.php?success=1");
 exit();
 ?>
+
