@@ -336,10 +336,11 @@
     /* Bottom: Aquatic image centered under BOTH columns */
     .layout img[src*="aquatic"] {
         grid-row: 2;
-        grid-column: 1 / span 2;   /* ⭐ spans BOTH columns */
-        max-width: 300px;
-        margin: 30px auto 0 auto;  /* ⭐ adds nice spacing above */
-        display: block;            /* ⭐ ensures proper centering */
+        grid-column: 1;     /* ⭐ moves it LEFT under the table */
+        max-width: 250px;
+        margin-top: -20px;  /* ⭐ moves it UP */
+        margin-left: 0;     /* ⭐ aligns left */
+        justify-self: start;
     }
 
     h4 {
