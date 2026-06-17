@@ -142,70 +142,59 @@
 
         /* === Table Styles === */
         /* CLEAN RESPONSIVE HOURS TABLE */
-        #hoursTable {
+        .hours-table {
             width: 100%;
-            max-width: 300px;
-            margin-top: 75px;
-            margin: 20px auto 0 auto;   /* centered inside its column */
+            max-width: 350px;
+            margin: 20px auto;
             border-collapse: collapse;
+            font-size: 16px;
             background: #ffffff;
             border-radius: 10px;
             overflow: hidden;
-            font-size: 15px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
-        #hoursTable th {
-            background: #008080;
+        .hours-table th {
+            background: #FFA500;
             color: white;
-            padding: 10px;
-            font-size: 16px;
+            padding: 12px;
+            font-size: 18px;
+            text-align: left;
         }
 
-        #hoursTable td {
-            padding: 8px 10px;
+        .hours-table td {
+            padding: 10px 12px;
             border-bottom: 1px solid #eee;
         }
 
-        #hoursTable tr:last-child td {
+        .hours-table tr:last-child td {
             border-bottom: none;
         }
 
+        .hours-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
 
         h4 {
-        width: 90%;
-        max-width: 500px;
-        margin-left: 75px;
-        margin: 10px 0 20px 20px;   /* LEFT aligned */
-        padding: 12px 16px;
-        text-align: left;
-        font-size: 16px;
-        line-height: 1.4;
-        border: 2px solid #333;
-        border-radius: 8px;
-        background-color: #f1f8f5;
-        clear: both;               /* prevents overlap with table */
-        display: block;            /* ensures left alignment */
+            width: 90%;
+            max-width: 500px;
+            margin-left: 75px;
+            margin: 10px 0 20px 20px;   /* LEFT aligned */
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.4;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #f1f8f5;
+            clear: both;               /* prevents overlap with table */
+            display: block;            /* ensures left alignment */
         
-        .star {
-        color: #FFA500;       /* Yellow color */
-        font-size: 20px;   /* Size of the star */
+            .star {
+            color: #FFA500;       /* Yellow color */
+            font-size: 20px;   /* Size of the star */
+            }
         }
-    }
-
-        .login-btn {
-            position: fixed;        /* stays in place even when scrolling */
-            bottom: 20px;           /* distance from bottom */
-            right: 20px;            /* distance from right side */
-            padding: 8px 16px;      /* small button size */
-            font-size: 14px;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.2s ease;
-        }
-
 
         /* Fixed footer that stays at the bottom of the screen */
         footer {
@@ -308,9 +297,9 @@
         max-width: 300px;
         height: auto;
         border-radius: 8px;
-        margin-top: 100px;
-        margin-left: auto;   /* ⭐ centers inside flexbox */
-        margin-right: auto;  /* ⭐ centers inside flexbox */
+        margin-top: 100px;   /* ⛔ This pushes ALL images down */
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
@@ -330,13 +319,17 @@
         justify-self: end;
     }
 
-    /* Bottom row: Aquatic image centered above testimony */
+    /* Bottom: Aquatic image centered under BOTH columns */
     .layout img[src*="aquatic"] {
         grid-row: 2;
-        grid-column: 1 / -1;   /* ⭐ spans BOTH columns */
-        max-width: 300px;
-        margin: 10px auto 0 auto;  /* ⭐ centers it */
+        grid-column: 1 / span 2;
+        max-width: 260px;
+
+        justify-self: center;
+        margin-top: -210px;   /* moves UP slightly */
+        margin-left: 75px;   /* moves RIGHT slightly */
     }
+
 
     h4 {
         grid-row: 3;              /* ⭐ moves testimony BELOW the image */
@@ -349,76 +342,77 @@
 }
     
     </style>
-</head>
-
+    </head>
 <body>
+<!-- About Us at Top -->
+<section class="about">
+    <h2>Aquatic Adventures</h2>
+</section>
 
-    <!-- About Us at Top -->
-    <section class="about">
-        <h2>Aquatic Adventures</h2>
-    </section>
+<!-- Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <div class="logo">Aquatic Adventures</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fish.html">Fish</a></li>
+            <li><a href="products.html">Fish Supplies</a></li>
+            <li><a href="reptiles.html">Reptiles</a></li>
+            <li><a href="location.html">Location</a></li>
 
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Aquatice Adventures</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fish.html">Fish</a></li>
-                <li><a href="products.html">Fish Supplies</a></li>
-                <li><a href="reptiles.html">Reptiles</a></li>
-                <li><a href="location.html">Location</a></li>
-                <!-- Facebook icon link -->
-                <li>
+            <!-- Facebook icon link -->
+            <li>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-                <a href="https://www.facebook.com/people/Aquatic-Adventures/61558479800656/" 
-                   class="facebook-link" 
-                   target="_blank" 
+                <a href="https://www.facebook.com/people/Aquatic-Adventures/61558479800656/"
+                   class="facebook-link"
+                   target="_blank"
                    rel="noopener noreferrer"
                    aria-label="Visit our Facebook page">
                     <i class="fab fa-facebook"></i>
                 </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-    <div class="layout">
-        <!-- Left image -->
-        <img src="aquatic.webp" alt="Left Side Image">
-        <!-- Contact Form -->
+<div class="layout">
+
+    <!-- Left image -->
+    <img src="aquatic.webp" alt="Left Side Image">
+
+    <!-- Hours Section -->
     <main>
-        <h3>Hours of Operation</h3>
-        <table id="hoursTable">
-            <tr><th>Day</th><th>Hours</th></tr>
-            <tr><td>Monday</td><td>Closed</td></tr>
-            <tr><td>Tuesday</td><td>Closed</td></tr>
-            <tr><td>Wednesday</td><td>11:00 AM – 5:00 PM</td></tr>
-            <tr><td>Thursday</td><td>11:00 AM – 5:00 PM</td></tr>
-            <tr><td>Friday</td><td>11:00 AM – 5:00 PM</td></tr>
-            <tr><td>Saturday</td><td>11:00 AM – 5:00 PM</td></tr>
-            <tr><td>Sunday</td><td>11:00 AM - 5:00 PM</td></tr>
+        <h3 class="hours-title">Hours of Operation</h3>
+
+        <table class="hours-table">
+            <tr><td>Monday:</td><td>Closed</td></tr>
+            <tr><td>Tuesday:</td><td>Closed</td></tr>
+            <tr><td>Wednesday:</td><td>11:00 AM – 5:00 PM</td></tr>
+            <tr><td>Thursday:</td><td>11:00 AM – 5:00 PM</td></tr>
+            <tr><td>Friday:</td><td>11:00 AM – 5:00 PM</td></tr>
+            <tr><td>Saturday:</td><td>11:00 AM – 5:00 PM</td></tr>
+            <tr><td>Sunday:</td><td>11:00 AM – 5:00 PM</td></tr>
         </table>
     </main>
 
+    <!-- Right image -->
     <img src="Marquee.jpg" alt="Right Side Image">
-    </div>
-    <h4>"Love this place!! They are very knowledgeable. 
-        They take the time to explain everything. Would definitely recommend them to everyone."
-        - Crystle Wagner
-        <span class="star">&#9733;</span>
-        <span class="star">&#9733;</span>
-        <span class="star">&#9733;</span>
-        <span class="star">&#9733;</span>
-        <span class="star">&#9733;</span>
-    </h4>
 
-    <button onclick="window.location.href='login.html';">Login</button>
+</div>
 
-    <footer class="page-footer">
-        <p>&copy; 2026 Aquatice Adventures. All rights reserved.</p>
-    </footer>
+<!-- Testimonial -->
+<h4>
+    "Love this place!! They are very knowledgeable. 
+    They take the time to explain everything. Would definitely recommend them to everyone."
+    – Crystle Wagner
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+</h4>
 
-
-    </body>
-</html>
+<!-- Footer -->
+<footer class="page-footer">
+    <p>&copy; 2026 Aquatic Adventures. All rights reserved.</p>
+</footer>
